@@ -1,0 +1,26 @@
+<h1>Prueba Persona</h1>
+
+<form [formGroup]="persona" (ngSubmit)="guardarPersona()">
+    <label>nombre
+        <input type="text" formControlName="nombre">
+    </label>
+    <br>
+    <label>apellido
+        <input type="text" formControlName="apellido">
+    </label>
+    <br>
+    <label>edad
+        <input type="number" formControlName="edad">
+    </label>
+    <br>
+    <label>dni
+        <input type="number" formControlName="dni">
+    </label>
+    <br>
+    <label>domicilio
+        <input type="text" formControlName="domicilio">
+    </label>
+    <br>
+    <button type="submit">Guardar</button>
+
+</form>

@@ -1,0 +1,31 @@
+<form [formGroup]='autoForm' (ngSubmit)=submit()>
+    <label>marca
+        <input type="text" formControlName="marca">
+    </label>
+    <br>
+    <label>año
+        <input type="number" formControlName="añoModelo">
+    </label>
+    <br>
+    <div formGroupName='patente'>
+        patente
+        <input type="number" formControlName="numeros">
+        <input type="text" formControlName="letras">
+    </div>
+    <div formArrayName="nombres">
+        Nombre
+        <button (click)="agregarNombre()">Agregar Nombres Modelos</button>
+    
+        <div *ngFor="let nombre of nombres.controls; let i = index">
+            <label>
+                nombre modelo<input type="text" [formControlName]="i">
+            </label>
+        </div>
+    
+    </div>
+    
+    <button type="submit">Guardar</button>
+    
+    
+    
+    </form>
