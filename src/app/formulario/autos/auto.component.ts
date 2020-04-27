@@ -29,7 +29,7 @@ export class AutoComponent{
 
     submit(){
         debugger;
-        this.autoForm.value();
+        this.autoForm.value;
 
     }
 
