@@ -1,0 +1,44 @@
+<p>paciente works!</p>
+
+<!-- ng g c data-bindings/jugador -->
+
+<!-- Porpiedad del componente hijo con un valor enviado desde el componente padre -->
+<p>Medico Hijo: {{medicoHijo}}</p>
+<button (click)="cambioMedico()">Enviar al padre</button>
+
+<!-- Interpolación es de una sola vía.  clase => vista-->
+<p>Nombre Interpolado: {{nombrePaciente}}</p>
+
+<ul>
+    <li *ngFor="let paciente of pacientes">
+        <!-- Directiva *ngFor que itera sobre el array -->
+        {{paciente}}
+    </li>
+</ul>
+<ul *ngIf="verPacientes">
+    <li *ngFor="let paciente of paciente1">
+        <!-- Interpolación del array de objeto jugador1. Accedemos a la propiedad de cada objeto.Ej: nombre, equipo -->
+        Nombre: {{paciente.nombre | lowercase}}
+        Medico: {{paciente.medico | uppercase}}
+        <p *ngIf="paciente.nombre === 'nico'">Muestra a nico</p>
+    </li>
+</ul>
+ <!-- <div>
+    
+    <h4>Property Binding</h4>
+    <img [src]="imagenPaciente" [title]="tooltip" [width]="anchoImg" [height]="altoImg">
+    <!- La propiedad a modificar se encierra en corchetes y la propiedad que se pasa por valor se encierra en comillas ->
+</div> 
+
+<div>
+    <h4>Con interpolación conseguimos lo mismo</h4>
+    <img src={{imagenJugador}} title={{tooltip}} width={{anchoImg}} height={{altoImg}}>
+</div>
+
+<div>
+    <h4>Event Binding</h4>
+    <!- El nombre del evente se encierra entre paréntesis y el nombre del método entre comillas ->
+    <button (click)="verJugador(nombreJugador)">Ver Jugador</button>
+</div>
+
+-->
