@@ -14,10 +14,10 @@ export class PacienteComponent implements OnInit {
     verPacientes: boolean = true;
     nombrePaciente: string; //propiedad
 
-   /* imagenPaciente: string = 'https://cde.peru.com//ima/0/1/8/2/6/1826484/924x530/whatsapp.jpg';
+    imagenPaciente: string = 'https://cde.peru.com//ima/0/1/8/2/6/1826484/924x530/whatsapp.jpg';
     anchoImg = '150';
     altoImg = '150';
-    tooltip = 'nico';*/
+    tooltip = 'nico';
 
     //objeto de tipo paciente 
     paciente: Paciente = {
